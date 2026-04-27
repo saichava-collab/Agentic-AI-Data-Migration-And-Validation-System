@@ -1,0 +1,26 @@
+app:
+  name: agentic-ai-data-migration-validation-system
+
+paths:
+  source_csv: data/source_csv/customers.csv
+  source_sqlite: data/source_sqlite.db
+  output_dir: data/output
+  streaming_dir: data/streaming
+
+spark:
+  app_name: AgenticMigrationValidationJob
+  master: local[*]
+
+validation:
+  semantic_similarity_threshold: 0.72
+  allow_null_customer_email: false
+  allow_duplicate_customer_id: false
+  enable_llm_validation: true
+  llm_provider: ollama
+  ollama_model: llama3
+  ollama_base_url: http://localhost:11434
+
+kafka:
+  bootstrap_servers: localhost:9092
+  topic: migration-events
+  consumer_group: migration-validation-group

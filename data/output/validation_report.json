@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "total_rule_checks": 4,
+    "passed_rule_checks": 4,
+    "failed_rule_checks": 0,
+    "semantic_name_pass_rate": 0.1667,
+    "semantic_status_pass_rate": 0.375,
+    "llm_records_checked": 3,
+    "llm_records_equivalent": 3,
+    "validation_agent": "MigrationValidationAgent"
+  },
+  "rules": [
+    {
+      "name": "customer_count_match",
+      "passed": true,
+      "details": {
+        "source_count": 6,
+        "target_count": 6
+      }
+    },
+    {
+      "name": "order_count_match",
+      "passed": true,
+      "details": {
+        "source_count": 8,
+        "target_count": 8
+      }
+    },
+    {
+      "name": "no_duplicate_customer_ids",
+      "passed": true,
+      "details": {
+        "duplicate_count": 0,
+        "columns": [
+          "customer_id"
+        ]
+      }
+    },
+    {
+      "name": "critical_fields_not_null",
+      "passed": true,
+      "details": {
+        "null_counts": {
+          "customer_id": 0,
+          "order_id": 0,
+          "email": 0
+        }
+      }
+    }
+  ],
+  "semantic_checks": {
+    "names": [
+      {
+        "source_value": "Alice Johnson",
+        "target_value": "Farhan Ali",
+        "score": 0.2609,
+        "passed": false
+      },
+      {
+        "source_value": " Bob Smith",
+        "target_value": "Bob Smith",
+        "score": 1.0,
+        "passed": true
+      },
+      {
+        "source_value": "Carlos Diaz",
+        "target_value": "Diana Prince",
+        "score": 0.2609,
+        "passed": false
+      },
+      {
+        "source_value": "Diana Prince",
+        "target_value": "Evelyn Stone",
+        "score": 0.3333,
+        "passed": false
+      },
+      {
+        "source_value": "Evelyn Stone",
+        "target_value": "Alice Johnson",
+        "score": 0.4,
+        "passed": false
+      },
+      {
+        "source_value": "Farhan Ali",
+        "target_value": "Carlos Diaz",
+        "score": 0.2857,
+        "passed": false
+      }
+    ],
+    "statuses": [
+      {
+        "source_value": "DONE",
+        "target_value": "completed",
+        "score": 1.0,
+        "passed": true
+      },
+      {
+        "source_value": "PENDING_APPROVAL",
+        "target_value": "completed",
+        "score": 0.375,
+        "passed": false
+      },
+      {
+        "source_value": "DONE",
+        "target_value": "completed",
+        "score": 1.0,
+        "passed": true
+      },
+      {
+        "source_value": "FAILED",
+        "target_value": "pending",
+        "score": 0.25,
+        "passed": false
+      },
+      {
+        "source_value": "DONE",
+        "target_value": "completed",
+        "score": 1.0,
+        "passed": true
+      },
+      {
+        "source_value": "PENDING_APPROVAL",
+        "target_value": "completed",
+        "score": 0.375,
+        "passed": false
+      },
+      {
+        "source_value": "DONE",
+        "target_value": "pending",
+        "score": 0.375,
+        "passed": false
+      },
+      {
+        "source_value": "DONE",
+        "target_value": "cancelled",
+        "score": 0.4444,
+        "passed": false
+      }
+    ]
+  },
+  "llm_semantic_checks": [
+    {
+      "source_order_id": 1007,
+      "source_customer_id": 6,
+      "result": {
+        "equivalent": true,
+        "confidence": 1.0,
+        "reason": "All fields in the source record have been transformed to their equivalent values in the target record, with no changes to data semantics.",
+        "model": "llama3",
+        "mode": "ollama",
+        "provider": "ollama-local"
+      }
+    },
+    {
+      "source_order_id": 1003,
+      "source_customer_id": 2,
+      "result": {
+        "equivalent": true,
+        "confidence": 1.0,
+        "reason": "All fields in the source record have been transformed to their equivalent values in the target record, with no changes to data semantics.",
+        "model": "llama3",
+        "mode": "ollama",
+        "provider": "ollama-local"
+      }
+    },
+    {
+      "source_order_id": 1005,
+      "source_customer_id": 4,
+      "result": {
+        "equivalent": true,
+        "confidence": 1.0,
+        "reason": "All fields in the source record have been transformed to their equivalent values in the target record, with no changes to data semantics.",
+        "model": "llama3",
+        "mode": "ollama",
+        "provider": "ollama-local"
+      }
+    }
+  ]
+}

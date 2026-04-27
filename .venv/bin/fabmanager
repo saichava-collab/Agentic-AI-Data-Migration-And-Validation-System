@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/Users/shreyahavaldar/Downloads/agentic_ai_data_migration_validation_system 2/.venv/bin/python3.11" "$0" "$@"
+' '''
+import sys
+from flask_appbuilder.console import cli
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(cli())

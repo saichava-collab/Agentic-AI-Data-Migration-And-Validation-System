@@ -1,0 +1,9 @@
+customer_id,full_name,email,country,signup_ts,order_id,product_name,order_amount,order_status,normalized_status,created_at
+6,Farhan Ali,farhan@example.com,UAE,2024-01-15 18:20:00,1007,Dock,180.0,DONE,completed,2024-02-06 14:30:00
+2,Bob Smith,bob.smith@example.com,USA,2024-01-11 12:00:00,1003,Keyboard,70.0,DONE,completed,2024-02-02 10:00:00
+4,Diana Prince,diana@example.com,India,2024-01-13 14:40:00,1005,Desk,500.0,DONE,completed,2024-02-04 12:30:00
+5,Evelyn Stone,evelyn@example.com,UK,2024-01-14 17:05:00,1006,Chair,220.0,PENDING_APPROVAL,pending,2024-02-05 13:30:00
+2,Bob Smith,bob.smith@example.com,USA,2024-01-11 12:00:00,1008,Webcam,95.0,DONE,completed,2024-02-07 15:30:00
+1,Alice Johnson,alice@example.com,USA,2024-01-10 10:15:00,1001,Laptop,1200.0,DONE,completed,2024-02-01 08:00:00
+1,Alice Johnson,alice@example.com,USA,2024-01-10 10:15:00,1002,Mouse,25.5,PENDING_APPROVAL,pending,2024-02-01 09:00:00
+3,Carlos Diaz,carlos@example.com,Mexico,2024-01-12 09:30:00,1004,Monitor,300.0,FAILED,cancelled,2024-02-03 11:00:00

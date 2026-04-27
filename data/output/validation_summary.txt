@@ -1,0 +1,9 @@
+Validation Summary
+==================
+Validation agent: MigrationValidationAgent
+Rule checks passed: 4 / 4
+Semantic name pass rate: 0.1667
+Semantic status pass rate: 0.375
+LLM records checked: 3
+LLM records equivalent: 3
+LLM mode: ollama

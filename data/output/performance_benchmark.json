@@ -1,0 +1,11 @@
+{
+  "baseline_strategy": "default Spark execution plan",
+  "optimized_strategy": "repartition by customer_id and cache before downstream actions",
+  "baseline_seconds": 0.4592,
+  "optimized_seconds": 0.3252,
+  "baseline_records": 8,
+  "optimized_records": 8,
+  "throughput_improvement_pct": 29.18,
+  "processing_cost_reduction_proxy_pct": 29.18,
+  "note": "Runtime varies by machine. The file documents the exact local measurement for interview discussion."
+}
